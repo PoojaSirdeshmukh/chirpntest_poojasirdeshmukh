@@ -1,0 +1,10 @@
+{
+    "environmentType": "local",
+    "envConfig": {
+        "local": {
+            "port":8282,
+            "dbHost": "local",
+            "dbConnectionString":"mongodb://127.0.0.1/chirpnTest"
+        }
+    }
+}
