@@ -28,6 +28,7 @@ var envConfig = config.environmentConfig();
 
 var routes = require('./routes/index');
 var userRoutes = require('./routes/users');
+var productRouter = require('./routes/product');
 
 var port = envConfig.port;
 var app = express();
@@ -54,6 +55,7 @@ app.get('/*', function (req, res, next) {
 });
 app.use('/', routes);
 app.use('/api/users/', userRoutes);
+app.use('/product', productRouter);
 
 var server = app.listen(process.env.PORT || port, function () {
   console.log('server runnig on port:', port);
